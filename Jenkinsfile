@@ -4,14 +4,14 @@ agent any
     stage("build") {
       steps {
         sh """
-          docker build -t python-bdd .
+          docker build python-bdd .
         """
       }
     }
     stage("run") {
       steps {
         sh """
-          docker run --rm python-bdd
+          docker run python-bdd
         """
       }
     }
